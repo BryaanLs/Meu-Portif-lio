@@ -492,10 +492,6 @@ ul {
         background-position: top top;
         /* background-size: contain; */
     }
-    
-    .section-main, .intro{
-        min-height: auto;
-    }
 }
 
 
