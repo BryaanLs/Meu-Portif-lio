@@ -489,7 +489,7 @@ ul {
     
     .bg-main {
         background-image: url(/assets/img/mobile-gif-mario.gif);
-        background-position: bottom center;
+        background-position: top center;
         background-size: contain;
     }
 }
