@@ -467,12 +467,7 @@ ul {
 
 
 
-@media (max-width: 500px) {
-    .bg-main {
 
-        background-image: url(/assets/img/mobile-gif-mario.gif);
-    }
-}
 
 @media (max-width: 800px) {
     .intro-links ul {
@@ -491,7 +486,12 @@ ul {
     .grid {
         grid-template-columns: 1fr;
     }
+    
+    .bg-main {
+        background-image: url(/assets/img/mobile-gif-mario.gif);
+    }
 }
+
 
 
 
