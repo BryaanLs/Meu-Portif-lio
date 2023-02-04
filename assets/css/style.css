@@ -490,6 +490,10 @@ ul {
     .bg-main {
         background-image: url(/assets/img/mobile-gif-mario.gif);
     }
+    
+    .section-main, .intro{
+        min-height: auto;
+    }
 }
 
 
