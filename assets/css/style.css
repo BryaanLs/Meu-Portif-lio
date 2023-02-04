@@ -492,6 +492,10 @@ ul {
         background-position: top center;
         background-size: contain;
     }
+    
+    .section-main, .intro{
+        min-height: 80vh;
+    }
 }
 
 
