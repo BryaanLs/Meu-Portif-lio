@@ -628,11 +628,11 @@ ul {
 
 
 @media (max-width: 800px) {
-    
-    .intro h1{
+
+    .intro h1 {
         font-size: 3.3rem;
     }
-    
+
     .intro-links ul {
         flex-direction: column;
 
@@ -649,29 +649,19 @@ ul {
     .grid {
         grid-template-columns: 1fr;
     }
-    
+
     .bg-main {
         background-image: url(/assets/img/mobile-gif-mario.gif);
         background-position: top center;
         background-size: contain;
     }
-    
-    .section-main, .intro{
+
+    .section-main,
+    .intro {
         min-height: 90vh;
     }
 }
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
->>>>>>> 36196a96626a4f0197167051bfe6f1403e9dcda9
 ::-webkit-scrollbar {
     width: 0.5rem;
     background-color: var(--p-color);
