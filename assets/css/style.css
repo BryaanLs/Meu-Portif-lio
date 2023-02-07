@@ -161,6 +161,17 @@ ul {
     }
 }
 
+@keyframes menuEntrada {
+    from {
+        width: 0;
+        background-color: var(--p-color);
+    }
+
+    to {
+        width: 100vw;
+    }
+}
+
 .section-main {
     min-height: 100vh;
     padding: 1rem;
@@ -199,9 +210,11 @@ ul {
     left: 0;
     right: 0;
     z-index: 100;
-    /* box-shadow: 0 1px 8px var(--s-color); */
-    /* border-bottom: 1px solid var(--s-color);
-    backdrop-filter: blur(1rem); */
+
+}
+
+.close-menu {
+    display: none;
 }
 
 .desprender {
@@ -377,6 +390,11 @@ ul {
     color: var(--p-color);
     font-size: 2rem;
     font-weight: bold;
+}
+
+.about img {
+    width: 80%;
+    height: auto;
 }
 
 .about-content a:hover {
@@ -576,12 +594,6 @@ ul {
 
 /*                                                      */
 
-
-
-
-
-
-
 /* @media (min-width:2700px) {
     .main-content {
         max-width: 200rem;
@@ -650,6 +662,7 @@ ul {
 
     .intro-links ul li {
         margin-top: 2rem;
+        margin-right: 0;
     }
 
     .about {
@@ -663,7 +676,7 @@ ul {
     .bg-main {
         background-image: url(/assets/img/mobile-gif-mario.gif);
         background-position: top center;
-        background-size: contain;
+        background-size: cover;
     }
 
     .section-main,
@@ -674,7 +687,77 @@ ul {
     .about-content {
         padding: 0 2rem 0 0;
     }
+
+    .menu {
+        height: 50vh;
+        width: 0;
+        background-color: var(--p-color);
+    }
+
+    .menu-content {
+        animation: menuEntrada 2s;
+        background-color: var(--p-color);
+        width: 100vw;
+        justify-content: center;
+
+    }
+
+    .menu-content ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        right: 0;
+        z-index: 2;
+        right: 3rem;
+        top: 3rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--primary-color);
+        color: var(--s-color);
+        text-align: center;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-menu:checked~.close-menu-label:hover::after {
+        border: 1px solid var(--s-color);
+        border-radius: 10rem;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-decoration-h1 h1 {
+        font-size: 3rem;
+    }
 }
+
+@media (max-width: 400px) {}
 
 ::-webkit-scrollbar {
     width: 0.5rem;

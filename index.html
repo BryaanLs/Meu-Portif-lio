@@ -17,12 +17,14 @@
 
 
 <body>
+    <input id="close-menu" class="close-menu" type="checkbox" role="button" aria-label="Close menu" aria-pressed="true">
+    <label for="close-menu" class="close-menu-label" title="close-menu"></label>
 
     <aside class="menu">
         <div class="menu-content main-content">
             <h1></h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#">início</a></li>
                     <li><a href="#sobremim">sobre mim</a></li>
                     <li><a href="#habilidades">habilidades</a></li>
@@ -51,10 +53,9 @@
         </div>
     </section>
 
-
     <section class="section secondary-bg" id="sobremim">
         <div class="main-content about text-decoration-h1">
-            <img class="memoji" src="assets/img/me-memoji.svg" height="350"
+            <img class="memoji" src="assets/img/me-memoji.svg"
                 alt="memoji do usuario do iphone personalizado com caracteristicas do bryan">
 
             <div class="about-content">
@@ -191,8 +192,6 @@
                         alt="captura de tela de um projeto de cadastro de usuarios e livros">
                     <a href="https://github.com/bryaanls" target="_blank">Outros projetos</a>
                 </div>
-
-
 
             </div>
 
