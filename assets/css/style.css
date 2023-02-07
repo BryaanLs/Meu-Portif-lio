@@ -408,12 +408,17 @@ ul {
     gap: 3rem;
     align-items: start;
     justify-items: center;
+    margin-bottom: 5rem;
 }
 
 .grid-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+
 }
 
 .grid-content h2 {
@@ -427,12 +432,15 @@ ul {
     padding: 1rem;
 }
 
-.card:hover {
+/* .card {
+    height: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+} */
+
+.grid-content:hover {
     transition: var(--transition);
     transform: translateY(-2rem);
-    background-color: var(--opacity-color-navbar);
-    /* color: var(--p-color); */
-    border: 1px solid var(--opacity-color-navbar);
     box-shadow: 10px 10px 20px black;
     border-radius: 1rem;
     height: 100%;
@@ -475,23 +483,24 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2rem 3rem;
     color: var(--txt-color);
     border-radius: 1rem;
     height: 100%;
     width: 100%;
+
 }
 
 .card-project h2 {
     text-align: center;
     font-size: 3rem;
-    padding-bottom: 1rem;
+
 }
 
 .card-project img {
     max-width: 100%;
-    margin: 2rem 0;
+    margin: 3rem 0;
     border-radius: 0.5rem;
 
 }
@@ -514,8 +523,10 @@ ul {
 .card-project:hover {
     transition: var(--transition);
     transform: translateY(-2%);
-    box-shadow: 0 0 10px var(--s-color);
+    box-shadow: 0 0 5px var(--s-color);
 }
+
+
 
 .card-project a:hover {
     transition: var(--transition);
@@ -554,12 +565,13 @@ ul {
     animation: marioMartelo 800ms infinite;
 }
 
-
+#emBreve {
+    margin: auto;
+}
 
 .project-container {
     display: none;
     animation: entrada 1s;
-
 }
 
 /*                                                      */
@@ -625,8 +637,6 @@ ul {
     }
 }
 
-
-
 @media (max-width: 800px) {
 
     .intro h1 {
@@ -659,6 +669,10 @@ ul {
     .section-main,
     .intro {
         min-height: 90vh;
+    }
+
+    .about-content {
+        padding: 0 2rem 0 0;
     }
 }
 

@@ -1,6 +1,7 @@
 function seeMore() {
     const seeMoreBtn = document.querySelector('#seeMore');
     const divContent = document.querySelector('.project-container');
+
     let click = 1;
 
     seeMoreBtn.addEventListener('click', () => {
@@ -11,9 +12,8 @@ function seeMore() {
         } else {
             divContent.style.display = 'grid';
             seeMoreBtn.innerHTML = 'Ver menos';
-
-
         }
+
         click++;
 
     });
@@ -30,3 +30,5 @@ function desprendeMenu() {
 
 seeMore();
 desprendeMenu();
+
+
