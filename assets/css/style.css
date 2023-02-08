@@ -594,8 +594,7 @@ ul {
     border: 3px solid var(--txt-color);
     cursor: pointer;
     font-size: 1.8rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin: 3rem 1rem 5rem;
 
 }
 
@@ -633,7 +632,70 @@ ul {
 
 
 
-/*                                                      */
+/*                         FOOTER                             */
+
+.social {
+
+    padding: 5rem 1rem 1rem;
+    background-color: var(--ps-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.social::before {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 99vw;
+    height: 0.1rem;
+    background-color: var(--p-color);
+    box-shadow: 0 0 10px 5px var(--p-color);
+}
+
+.social li a {
+    display: block;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    position: relative;
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.social li a:hover {
+    transition: var(--transition);
+    background-color: var(--s-color);
+
+}
+
+.social li a::after {
+    position: absolute;
+    right: 0;
+    border-radius: 10rem;
+    content: '';
+    width: 100%;
+    height: 100%;
+    animation: socialAnimation 2s infinite both;
+    border-right: 1px solid var(--txt-color);
+    border-left: 1px solid var(--s-color);
+
+
+}
+
+@keyframes socialAnimation {
+
+    100% {
+        rotate: 360deg;
+
+    }
+}
 
 /* @media (min-width:2700px) {
     .main-content {
