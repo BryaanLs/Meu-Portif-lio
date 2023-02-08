@@ -679,13 +679,13 @@ ul {
 
     @keyframes desprenderAnimation {
         from {
-
-            width: 0;
+            width: 100vw;
+            height: 0;
         }
 
         to {
-
             width: 100vw;
+            height: 60vh;
         }
     }
 
@@ -727,14 +727,14 @@ ul {
     }
 
     .menu {
-        height: 30rem;
+        height: 60vh;
         width: 100vw;
     }
 
 
     .menu-content {
         animation: desprenderAnimation 0.3s both;
-        position: fixed;
+        position: relative;
 
     }
 
