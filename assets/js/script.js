@@ -33,6 +33,10 @@ function desprendeMenuMobile() {
 
     const menu = document.querySelector('.menu');
     let tamanho = document.body.clientWidth;
+    if (tamanho > 1000) {
+        desprendeMenu();
+    }
+
     if (tamanho < 800) {
         menu.classList.add('desprender');
     }
