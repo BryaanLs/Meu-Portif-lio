@@ -655,6 +655,9 @@ ul {
     box-shadow: 0 0 10px 5px var(--p-color);
 }
 
+
+
+
 .social li a {
     display: block;
     margin-right: 1rem;
@@ -673,6 +676,7 @@ ul {
     transition: var(--transition);
     background-color: var(--s-color);
     box-shadow: 0 0 30px 5px var(--s-color);
+    transform: scale(95%) translateY(-15%);
 
 }
 
@@ -683,13 +687,40 @@ ul {
     content: '';
     width: 100%;
     height: 100%;
-    animation: socialAnimation 2s infinite both;
+    animation: socialAnimation 5s linear infinite both;
     border-right: 1px solid var(--txt-color);
     border-left: 1px solid var(--s-color);
     border-top: 1px solid var(--txt-color);
     border-bottom: 1px solid var(--s-color);
+}
 
+.copy {
+    width: 100%;
+    padding: 1rem;
+    color: var(--p-color);
+    font-weight: bold;
+    background-color: var(--txt-color);
+    position: relative;
+}
 
+.copy::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+
+    height: 0.1rem;
+    background-color: var(--p-color);
+    box-shadow: 0 0 10px 5px var(--p-color);
+}
+
+.copy p {
+    padding: 1rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
 }
 
 @keyframes socialAnimation {
