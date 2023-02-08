@@ -172,6 +172,16 @@ ul {
     }
 }
 
+@keyframes desprenderAnimation {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 6.1rem;
+    }
+}
+
 .section-main {
     min-height: 100vh;
     padding: 1rem;
@@ -210,6 +220,7 @@ ul {
     left: 0;
     right: 0;
     z-index: 100;
+    transition: var(--transition);
 
 }
 
@@ -218,16 +229,45 @@ ul {
 }
 
 .desprender {
-    transition: var(--transition);
-    box-shadow: 0 0 5px var(--s-color);
-    background-color: #07122e;
+    backdrop-filter: blur(1rem);
+    background-color: #07122ebf;
+    animation: desprenderAnimation 1s;
+    position: fixed;
 }
+
+.desprender::after {
+    transition: var(--transition);
+    content: '';
+    position: fixed;
+    bottom: 0;
+    background-color: var(--s-color);
+    box-shadow: 0 0 20px 3px var(--s-color);
+    left: 50%;
+    width: 100%;
+    height: 0.1rem;
+    animation: lineAnimation 1s linear both;
+}
+
+@keyframes lineAnimation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+        left: 0;
+
+    }
+}
+
+
+
 
 
 .menu-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .menu-content ul {
