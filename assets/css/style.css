@@ -672,6 +672,7 @@ ul {
 .social li a:hover {
     transition: var(--transition);
     background-color: var(--s-color);
+    box-shadow: 0 0 30px 5px var(--s-color);
 
 }
 
@@ -685,6 +686,8 @@ ul {
     animation: socialAnimation 2s infinite both;
     border-right: 1px solid var(--txt-color);
     border-left: 1px solid var(--s-color);
+    border-top: 1px solid var(--txt-color);
+    border-bottom: 1px solid var(--s-color);
 
 
 }
