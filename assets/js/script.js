@@ -23,17 +23,26 @@ function desprendeMenu() {
     const menu = document.querySelector('.menu');
 
     window.addEventListener('scroll', (e) => {
-
         scrollY === 0 ? menu.classList.remove('desprender') : menu.classList.add('desprender');
-
-        // menu.style.transition = 'all 500ms ease-in-out' : '';
-
     });
+
+
+}
+
+function desprendeMenuMobile() {
+
+    const menu = document.querySelector('.menu');
+    let tamanho = document.body.clientWidth;
+    if (tamanho < 800) {
+        menu.classList.add('desprender');
+    }
+
 }
 
 
 
+
 seeMore();
-desprendeMenu();
+desprendeMenuMobile();
 
 
