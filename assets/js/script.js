@@ -36,21 +36,14 @@ function desprendeMenu() {
 }
 
 function desprendeMenuMobile() {
-
+    const menuMobile = document.querySelector('.close-menu-label');
     const menu = document.querySelector('.menu');
-    let tamanho = document.body.clientWidth;
-    if (tamanho > 1000) {
-        desprendeMenu();
-    }
 
-    if (tamanho < 800) {
+    menuMobile.addEventListener('click', () => {
         menu.classList.add('desprender');
-    }
-
+    })
 }
 
-
 seeMore();
+desprendeMenu();
 desprendeMenuMobile();
-
-
