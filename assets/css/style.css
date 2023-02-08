@@ -164,7 +164,7 @@ ul {
 @keyframes menuEntrada {
     from {
         width: 0;
-        background-color: var(--p-color);
+        /* background-color: var(--p-color); */
     }
 
     to {
@@ -242,7 +242,7 @@ ul {
 
 .desprender {
     backdrop-filter: blur(1rem);
-    background-color: #07122ebf;
+    background-color: var(--p-color);
     animation: desprenderAnimation 1s;
     position: fixed;
 }
@@ -731,10 +731,17 @@ ul {
         width: 100vw;
     }
 
+    .desprender {
+        position: sticky;
+    }
+
+    .desprender::after {
+        position: absolute;
+    }
 
     .menu-content {
         animation: desprenderAnimation 0.3s both;
-        position: relative;
+
 
     }
 
