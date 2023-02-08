@@ -6,10 +6,16 @@ function seeMore() {
 
     seeMoreBtn.addEventListener('click', () => {
         if (click % 2 === 0) {
-            divContent.style.display = 'none';
+            divContent.classList.add('removeSeeMore');
+            setTimeout(() => {
+                divContent.style.display = 'none';
+            }, 400);
+
             seeMoreBtn.innerHTML = 'Ver mais';
 
+
         } else {
+            divContent.classList.remove('removeSeeMore');
             divContent.style.display = 'grid';
             seeMoreBtn.innerHTML = 'Ver menos';
         }
@@ -42,8 +48,6 @@ function desprendeMenuMobile() {
     }
 
 }
-
-
 
 
 seeMore();

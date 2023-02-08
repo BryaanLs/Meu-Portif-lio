@@ -194,6 +194,17 @@ ul {
     }
 }
 
+@keyframes removeSeeMore {
+    from {
+        display: grid;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
 .section-main {
     min-height: 100vh;
     padding: 1rem;
@@ -617,6 +628,12 @@ ul {
     display: none;
     animation: entrada 1s;
 }
+
+.removeSeeMore {
+    animation: removeSeeMore 500ms linear both;
+}
+
+
 
 /*                                                      */
 
