@@ -14,6 +14,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--p-color);
+}
+
 html {
     font-size: 62.5%;
 }
@@ -753,29 +757,31 @@ ul {
 
     @keyframes desprenderAnimation {
         from {
-            width: 100%;
+
             height: 0;
             opacity: 0;
         }
 
         to {
-            width: 100%;
-            height: 30rem;
+
+            height: 35rem;
             opacity: 1;
+
         }
     }
 
     @keyframes prenderAnimation {
         from {
-            width: 100%;
-            height: 30rem;
+            height: 35rem;
             opacity: 1;
+
         }
 
         to {
-            width: 100%;
             height: 0;
             opacity: 0;
+
+
         }
     }
 
@@ -810,7 +816,7 @@ ul {
 
     .section-main,
     .intro {
-        min-height: 90vh;
+        min-height: 100vh;
     }
 
     .about-content {
@@ -818,7 +824,7 @@ ul {
     }
 
     .menu {
-        height: 30rem;
+        height: 35rem;
         width: 100%;
     }
 
@@ -832,9 +838,9 @@ ul {
         position: absolute;
     }
 
-    .menu-content {
+    /* .menu-content {
         animation: desprenderAnimation 1.4s both;
-    }
+    } */
 
     .menu-content ul {
         flex-direction: column;

@@ -60,12 +60,12 @@ function desprendeMenuMobile() {
 
 function verificaJanela() {
     window.addEventListener('resize', (e) => {
-        let janela = e.target.innerWidth;
-        if (janela <= 800 || janela >= 801) {
-            setTimeout(() => {
-                window.location.reload()
-            }, 0.1);
-        }
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 0);
+
+
     });
 };
 
@@ -74,11 +74,10 @@ function defineMenu() {
     if (window.innerWidth <= 800) {
         desprendeMenuMobile();
     }
-    if (window.innerWidth > 800) {
+    if (window.innerWidth >= 801) {
         desprendeMenu();
     }
 };
-
 
 seeMore();
 defineMenu();
