@@ -264,7 +264,7 @@ ul {
     position: fixed;
     bottom: 0;
     background-color: var(--s-color);
-    box-shadow: 0 0 20px 3px var(--s-color);
+    box-shadow: 0 0 30px 2px var(--s-color);
     left: 50%;
     width: 100%;
     height: 0.1rem;
@@ -656,8 +656,6 @@ ul {
 }
 
 
-
-
 .social li a {
     display: block;
     margin-right: 1rem;
@@ -720,7 +718,7 @@ ul {
     max-width: 120rem;
     margin: 0 auto;
     text-align: center;
-    line-height: 2;
+    line-height: 1;
 }
 
 @keyframes socialAnimation {
@@ -905,9 +903,38 @@ ul {
     }
 }
 
-/* @media (max-width: 400px) {
+@media (max-width: 390px) {
+    .copy p {
+        padding: 0;
+        padding-top: 1rem;
+        max-width: 120rem;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        text-align: center;
 
-} */
+    }
+
+    @keyframes animationDigit {
+        from {
+            width: 0;
+            opacity: 1;
+        }
+
+        to {
+            opacity: 1;
+            width: 25rem;
+        }
+    }
+
+    .intro p {
+        font-size: 2rem;
+    }
+
+    .intro-links ul a {
+        width: 20rem;
+        font-size: 2rem;
+    }
+}
 
 ::-webkit-scrollbar {
     width: 0.5rem;
