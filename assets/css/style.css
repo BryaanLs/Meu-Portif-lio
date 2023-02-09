@@ -729,52 +729,6 @@ ul {
     }
 }
 
-/* @media (min-width:2700px) {
-    .main-content {
-        max-width: 200rem;
-    }
-
-    .menu-content a {
-        font-size: 3rem;
-    }
-
-    .intro h1 {
-        font-size: 9rem;
-        width: 80vw;
-    }
-
-    @keyframes animationDigit {
-        from {
-            width: 0;
-            opacity: 1;
-        }
-
-        to {
-            opacity: 1;
-            width: 80%;
-        }
-    }
-
-    .intro p {
-        font-size: 8rem;
-        width: 100%;
-    }
-
-    .intro-links ul a img {
-        height: 5rem;
-    }
-
-    .intro-links ul a {
-        width: 50rem;
-        padding: 2rem 0;
-        font-size: 5rem;
-        border: 5px solid var(--s-color);
-    }
-
-
-
-}
- */
 @media(max-width: 1200px) {
     .projects {
         align-items: center;
