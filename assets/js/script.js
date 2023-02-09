@@ -26,72 +26,57 @@ function seeMore() {
 };
 
 function desprendeMenu() {
+
     const menu = document.querySelector('.menu');
-    window.addEventListener('scroll', () => {
-        if (scrollY > 0) {
+
+    if (window.innerWidth <= 800) {
+        verificaClique(menu);
+        // console.log('Mobile' + window.innerWidth);
+    }
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 0 && window.innerWidth > 800) {
             menu.classList.add('desprender');
             menu.classList.remove('prender');
+            // console.log('Desktop desprender' + window.innerWidth);
 
         }
         if (scrollY === 0) {
             menu.classList.add('prender');
             menu.classList.remove('desprender');
+            // console.log('Desktop prender' + window.innerWidth);
+
         }
     });
 };
+
 function removeClasse() {
     const menu = document.querySelector('.menu');
     menu.classList.remove('prender');
     menu.classList.remove('desprender');
 }
-function desprendeMenuMobile() {
-    const menuMobile = document.querySelector('.close-menu-label');
-    const menu = document.querySelector('.menu');
-    menu.style.display = 'none';
 
+function verificaClique(menu) {
+    const menuMobile = document.querySelector('.close-menu-label');
     let click = 0;
     menuMobile.addEventListener('click', () => {
         click++;
         if (click % 2 === 1) {
-            menu.style.display = 'block';
             menu.classList.remove('prender');
             menu.classList.add('desprender');
-
         }
         if (click % 2 === 0) {
+            menu.style.display = 'block'
             menu.classList.remove('desprender');
             menu.classList.add('prender');
-
-            setTimeout(() => {
-                menu.style.display = 'none';
-                removeClasse();
-            }, 1550);
         }
-    });
-};
+    })
 
-function verificaJanela() {
-    window.addEventListener('resize', (e) => {
-        setTimeout(() => {
-            window.location.reload();
-        }, 0);
 
-    });
-};
-
-function defineMenu() {
-    verificaJanela();
-    if (window.innerWidth <= 800) {
-        removeClasse();
-        desprendeMenuMobile();
-    }
-    if (window.innerWidth >= 801) {
-        removeClasse();
-        desprendeMenu();
-    }
-};
+}
 
 seeMore();
-defineMenu();
+desprendeMenu();
+
+
 
 
