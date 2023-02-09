@@ -43,14 +43,15 @@ function desprendeMenu() {
 function desprendeMenuMobile() {
     const menuMobile = document.querySelector('.close-menu-label');
     const menu = document.querySelector('.menu');
-    let click = 1;
+    let click = 0;
     menuMobile.addEventListener('click', () => {
         click++;
-        if (click % 2 === 0) {
+        if (click % 2 === 1) {
             menu.classList.remove('prender');
             menu.classList.add('desprender');
             menu.style.display = 'flex';
-        } else if (click % 2 === 1) {
+
+        } else if (click % 2 === 0) {
             menu.classList.add('prender');
             menu.classList.remove('desprender');
             setTimeout(() => {

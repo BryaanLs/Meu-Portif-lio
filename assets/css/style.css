@@ -792,6 +792,7 @@ ul {
     }
 
 
+
     .intro h1 {
         font-size: 3.3rem;
     }
@@ -844,10 +845,6 @@ ul {
         position: absolute;
     }
 
-    /* .menu-content {
-        animation: desprenderAnimation 1.4s both;
-    } */
-
     .menu-content ul {
         flex-direction: column;
         text-align: center;
@@ -857,9 +854,9 @@ ul {
         display: none;
     }
 
-    .close-menu {
+    /* .close-menu {
         display: none;
-    }
+    } */
 
     .close-menu-label::after {
         content: '☰';
