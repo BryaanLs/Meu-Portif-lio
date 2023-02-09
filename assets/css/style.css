@@ -899,6 +899,13 @@ ul {
     }
 }
 
+@media (max-width: 500px) {
+    .link-project {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 390px) {
     .copy p {
         padding: 0;
