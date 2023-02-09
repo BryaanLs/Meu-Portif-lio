@@ -57,17 +57,16 @@ function desprendeMenuMobile() {
                 menu.style.display = 'none';
                 menu.classList.remove('prender')
             }, 1800);
-
         }
     });
 };
 
 function verificaJanela() {
     window.addEventListener('resize', (e) => {
-
-        setTimeout(() => {
+        e.target.innerWidth > 800 ? setTimeout(() => {
             window.location.reload();
-        }, 0);
+        }, 0) : '';
+
     });
 };
 

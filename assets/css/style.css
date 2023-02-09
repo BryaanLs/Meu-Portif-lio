@@ -834,10 +834,10 @@ ul {
         width: 100%;
     }
 
-    .desprender,
+    /* .desprender,
     .prender {
         position: sticky;
-    }
+    } */
 
     .desprender::after,
     .prender::after {
