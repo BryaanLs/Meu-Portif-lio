@@ -65,16 +65,16 @@ function desprendeMenuMobile() {
             setTimeout(() => {
                 menu.style.display = 'none';
                 removeClasse();
-            }, 1800);
+            }, 1550);
         }
     });
 };
 
 function verificaJanela() {
     window.addEventListener('resize', (e) => {
-        e.target.innerWidth > 800 ? setTimeout(() => {
+        setTimeout(() => {
             window.location.reload();
-        }, 0) : '';
+        }, 0);
 
     });
 };
@@ -82,9 +82,11 @@ function verificaJanela() {
 function defineMenu() {
     verificaJanela();
     if (window.innerWidth <= 800) {
+        removeClasse();
         desprendeMenuMobile();
     }
     if (window.innerWidth >= 801) {
+        removeClasse();
         desprendeMenu();
     }
 };
