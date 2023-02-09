@@ -61,10 +61,10 @@ function desprendeMenuMobile() {
 function verificaJanela() {
     window.addEventListener('resize', (e) => {
         let janela = e.target.innerWidth;
-        if (janela <= 800) {
+        if (janela <= 800 || janela >= 801) {
             setTimeout(() => {
                 window.location.reload()
-            }, 0);
+            }, 0.1);
         }
     });
 };
