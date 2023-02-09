@@ -791,6 +791,10 @@ ul {
         }
     }
 
+    .menu {
+        display: none;
+    }
+
 
 
     .intro h1 {
