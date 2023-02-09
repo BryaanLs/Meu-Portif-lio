@@ -780,7 +780,6 @@ ul {
     }
 
 
-
     .intro h1 {
         font-size: 3.3rem;
     }
@@ -823,11 +822,13 @@ ul {
         width: 100%;
     }
 
-    .desprender {
+    .desprender,
+    .prender {
         position: sticky;
     }
 
-    .desprender::after {
+    .desprender::after,
+    .prender::after {
         position: absolute;
     }
 
