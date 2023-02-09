@@ -231,6 +231,12 @@ ul {
     }
 }
 
+@keyframes socialAnimation {
+    100% {
+        rotate: 360deg;
+    }
+}
+
 .section-main {
     min-height: 100vh;
     padding: 1rem;
