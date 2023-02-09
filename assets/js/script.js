@@ -26,34 +26,21 @@ function seeMore() {
 };
 
 function desprendeMenu() {
-
     const menu = document.querySelector('.menu');
-
     if (window.innerWidth <= 800) {
         verificaClique(menu);
-        // console.log('Mobile' + window.innerWidth);
     }
     window.addEventListener('scroll', (e) => {
         if (scrollY > 0 && window.innerWidth > 800) {
             menu.classList.add('desprender');
             menu.classList.remove('prender');
-            // console.log('Desktop desprender' + window.innerWidth);
-
         }
-        if (scrollY === 0) {
+        if (scrollY === 0 && window.innerWidth > 800) {
             menu.classList.add('prender');
             menu.classList.remove('desprender');
-            // console.log('Desktop prender' + window.innerWidth);
-
         }
     });
 };
-
-function removeClasse() {
-    const menu = document.querySelector('.menu');
-    menu.classList.remove('prender');
-    menu.classList.remove('desprender');
-}
 
 function verificaClique(menu) {
     const menuMobile = document.querySelector('.close-menu-label');
@@ -68,6 +55,7 @@ function verificaClique(menu) {
             menu.style.display = 'block'
             menu.classList.remove('desprender');
             menu.classList.add('prender');
+
         }
     })
 
