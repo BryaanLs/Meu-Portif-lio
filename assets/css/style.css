@@ -599,6 +599,7 @@ ul {
 
 .card-project a {
     margin-top: 3rem;
+    margin-right: 1rem;
     padding: 1rem 2rem;
     border: 3px solid var(--s-color);
     font-size: 1.8rem;
@@ -617,6 +618,22 @@ ul {
     transition: var(--transition);
     background-color: var(--txt-color);
     color: var(--p-color);
+}
+
+.link-project {
+    /* padding: 1rem; */
+    margin: 2rem 0;
+}
+
+#no-link {
+    filter: grayscale(1);
+    animation: none;
+    color: var(--opacity-color-navbar);
+    cursor: not-allowed;
+}
+
+#no-link:hover {
+    background-color: transparent;
 }
 
 #seeMore {
@@ -778,7 +795,6 @@ ul {
     @keyframes prenderAnimation {
         from {
             height: 35rem;
-            opacity: 1;
 
         }
 
@@ -836,7 +852,6 @@ ul {
         height: 35rem;
         width: 100%;
     }
-
 
     .desprender::after,
     .prender::after {
