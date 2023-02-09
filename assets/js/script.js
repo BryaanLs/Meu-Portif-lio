@@ -49,11 +49,15 @@ function desprendeMenuMobile() {
         if (click % 2 === 0) {
             menu.classList.remove('prender');
             menu.classList.add('desprender');
-
+            menu.style.display = 'flex';
         } else if (click % 2 === 1) {
             menu.classList.add('prender');
             menu.classList.remove('desprender');
-            menu.style.display = 'flex';
+            setTimeout(() => {
+                menu.style.display = 'none';
+                menu.classList.remove('prender')
+            }, 1800);
+
         }
     });
 };
@@ -64,8 +68,6 @@ function verificaJanela() {
         setTimeout(() => {
             window.location.reload();
         }, 0);
-
-
     });
 };
 
