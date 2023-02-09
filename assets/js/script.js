@@ -39,24 +39,32 @@ function desprendeMenu() {
         }
     });
 };
-
+function removeClasse() {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('prender');
+    menu.classList.remove('desprender');
+}
 function desprendeMenuMobile() {
     const menuMobile = document.querySelector('.close-menu-label');
     const menu = document.querySelector('.menu');
+    menu.style.display = 'none';
+
     let click = 0;
     menuMobile.addEventListener('click', () => {
         click++;
         if (click % 2 === 1) {
+            menu.style.display = 'block';
             menu.classList.remove('prender');
             menu.classList.add('desprender');
-            menu.style.display = 'flex';
 
-        } else if (click % 2 === 0) {
-            menu.classList.add('prender');
+        }
+        if (click % 2 === 0) {
             menu.classList.remove('desprender');
+            menu.classList.add('prender');
+
             setTimeout(() => {
                 menu.style.display = 'none';
-                menu.classList.remove('prender')
+                removeClasse();
             }, 1800);
         }
     });

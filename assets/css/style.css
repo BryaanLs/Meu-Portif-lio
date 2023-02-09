@@ -835,10 +835,6 @@ ul {
         width: 100%;
     }
 
-    /* .desprender,
-    .prender {
-        position: sticky;
-    } */
 
     .desprender::after,
     .prender::after {
@@ -849,14 +845,6 @@ ul {
         flex-direction: column;
         text-align: center;
     }
-
-    .menu {
-        display: none;
-    }
-
-    /* .close-menu {
-        display: none;
-    } */
 
     .close-menu-label::after {
         content: '☰';
