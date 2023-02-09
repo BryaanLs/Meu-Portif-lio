@@ -23,27 +23,64 @@ function seeMore() {
         click++;
 
     });
-}
+};
 
 function desprendeMenu() {
     const menu = document.querySelector('.menu');
+    window.addEventListener('scroll', () => {
+        if (scrollY > 0) {
+            menu.classList.add('desprender');
+            menu.classList.remove('prender');
 
-    window.addEventListener('scroll', (e) => {
-        scrollY === 0 ? menu.classList.remove('desprender') : menu.classList.add('desprender');
+        }
+        if (scrollY === 0) {
+            menu.classList.add('prender');
+            menu.classList.remove('desprender');
+        }
     });
-
-
-}
+};
 
 function desprendeMenuMobile() {
     const menuMobile = document.querySelector('.close-menu-label');
     const menu = document.querySelector('.menu');
-
+    let click = 1;
     menuMobile.addEventListener('click', () => {
-        menu.classList.add('desprender');
-    })
-}
+        click++;
+        if (click % 2 === 0) {
+            menu.classList.remove('prender');
+            menu.classList.add('desprender');
+
+        } else if (click % 2 === 1) {
+            menu.classList.add('prender');
+            menu.classList.remove('desprender');
+            menu.style.display = 'flex';
+        }
+    });
+};
+
+function verificaJanela() {
+    window.addEventListener('resize', (e) => {
+        let janela = e.target.innerWidth;
+        if (janela <= 800) {
+            setTimeout(() => {
+                window.location.reload()
+            }, 0);
+        }
+    });
+};
+
+function defineMenu() {
+    verificaJanela();
+    if (window.innerWidth <= 800) {
+        desprendeMenuMobile();
+    }
+    if (window.innerWidth > 800) {
+        desprendeMenu();
+    }
+};
+
 
 seeMore();
-desprendeMenu();
-desprendeMenuMobile();
+defineMenu();
+
+
