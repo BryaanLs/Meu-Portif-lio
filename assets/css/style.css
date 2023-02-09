@@ -289,7 +289,6 @@ ul {
 }
 
 
-
 .desprender {
     animation: desprenderAnimation 1s;
 }
@@ -794,7 +793,6 @@ ul {
     .menu {
         display: none;
     }
-
 
 
     .intro h1 {
