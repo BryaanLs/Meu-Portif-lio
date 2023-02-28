@@ -831,11 +831,17 @@ ul {
     }
 
     .prenderText {
-        animation: prenderText 0.5s both;
+        -o-animation: prenderText 1s both;
+        -webkit-animation: prenderText 1s both;
+        -moz-webkit-animation: prenderText 1s both;
+        animation: prenderText 1s both;
     }
 
     .desprenderText {
-        animation: desprenderText 0.5s both;
+        -o-animation: desprenderText 1s both;
+        -webkit-animation: desprenderText 1s both;
+        -moz-webkit-animation: desprenderText 1s both;
+        animation: desprenderText 1s both;
     }
 
     .desprender::after,
