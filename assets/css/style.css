@@ -832,6 +832,7 @@ ul {
         display: flex;
         transform: scale(100%);
         animation: desprenderText 1s ease-in;
+        -moz-webkit-animation: desprenderText 1s ease-in;
         transition: all 1s ease-in-out;
 
     }
