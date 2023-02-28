@@ -47,6 +47,12 @@ function verificaClique(menu) {
     const menuContent = document.querySelector('.menu-content');
     const menuMobile = document.querySelector('.close-menu-label');
     let click = 0;
+
+    window.addEventListener('resize', (e) => {
+        let largura = window.innerWidth;
+        if (largura <= 800) menu.classList.remove('desprender');
+    })
+
     menuMobile.addEventListener('click', () => {
         click++;
         if (click % 2 === 1) {
