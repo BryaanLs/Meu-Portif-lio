@@ -800,7 +800,6 @@ ul {
     @keyframes prenderAnimation {
         from {
             height: 35rem;
-            display: block;
 
         }
 
@@ -826,7 +825,7 @@ ul {
         }
 
         to {
-            transform: scale(100%);
+            transform: scale(90%);
         }
     }
 
