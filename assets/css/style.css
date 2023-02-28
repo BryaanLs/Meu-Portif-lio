@@ -831,11 +831,11 @@ ul {
     }
 
     .prenderText {
-        animation: prenderText 1s both;
+        animation: prenderText 0.5s both;
     }
 
     .desprenderText {
-        animation: desprenderText 1s both;
+        animation: desprenderText 0.5s both;
     }
 
     .desprender::after,
