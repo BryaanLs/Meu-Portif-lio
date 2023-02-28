@@ -274,7 +274,6 @@ ul {
     right: 0;
     z-index: 100;
     transition: var(--transition);
-
 }
 
 .close-menu {
@@ -830,14 +829,13 @@ ul {
     }
 
     .prenderText {
-
-        animation: prenderText 1s both;
+        animation: prenderText 0.5s both;
     }
 
     .desprenderText {
 
-        animation: desprenderText 1s both;
-        animation-delay: 0.3s;
+        animation: desprenderText 1s linear both;
+        /* animation-delay: 0.3s; */
     }
 
     .desprender::after,
@@ -937,8 +935,8 @@ ul {
 
     .bg-main {
         background-image: url(/assets/img/bg-main.gif);
-        background-position: top center;
-        background-repeat: no-repeat;
+        /* background-position: top center; */
+        /* background-repeat: no-repeat; */
         color: var(--txt-color);
         background-attachment: fixed;
     }
