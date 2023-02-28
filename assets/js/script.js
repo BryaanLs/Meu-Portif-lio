@@ -51,16 +51,16 @@ function verificaClique(menu) {
         click++;
         if (click % 2 === 1) {
 
-            menu.classList.remove('prender');
+            // menu.classList.remove('prender');
             menuContent.classList.remove('prenderText');
-            menu.classList.add('desprender');
+            // menu.classList.add('desprender');
             menuContent.classList.add('desprenderText');
         }
         if (click % 2 === 0) {
             menu.style.display = 'block';
-            menu.classList.remove('desprender');
+            // menu.classList.remove('desprender');
             menuContent.classList.remove('desprenderText');
-            menu.classList.add('prender');
+            // menu.classList.add('prender');
             menuContent.classList.add('prenderText');
 
         }
