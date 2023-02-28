@@ -807,16 +807,6 @@ ul {
         }
     }
 
-    @keyframes prenderText {
-        from {
-            transform: scale(100%);
-
-        }
-
-        to {
-            transform: scale(0%);
-        }
-    }
 
     @keyframes desprenderText {
         from {
@@ -829,7 +819,7 @@ ul {
     }
 
     .prenderText {
-        animation: prenderText 0.5s both;
+        transform: scale(0%);
     }
 
     .desprenderText {
