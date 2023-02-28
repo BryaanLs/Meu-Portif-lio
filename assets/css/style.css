@@ -295,6 +295,7 @@ ul {
 
 .prender {
     animation: prenderAnimation 2s both;
+
 }
 
 .desprender::after,
@@ -418,6 +419,7 @@ ul {
     border-radius: 10rem;
     animation: brilhoBtn 2s infinite alternate;
 }
+
 
 .intro-links ul a:hover {
     transition: var(--transition);
@@ -786,13 +788,13 @@ ul {
         from {
 
             height: 0;
-            /* opacity: 0; */
+            opacity: 0;
         }
 
         to {
 
             height: 35rem;
-            /* opacity: 1; */
+            opacity: 1;
 
         }
     }
@@ -800,14 +802,13 @@ ul {
     @keyframes prenderAnimation {
         from {
             height: 35rem;
+            display: block;
 
         }
 
         to {
             height: 0;
             opacity: 0;
-
-
         }
     }
 
@@ -862,6 +863,7 @@ ul {
     .prender::after {
         position: absolute;
     }
+
 
     .menu-content ul {
         flex-direction: column;

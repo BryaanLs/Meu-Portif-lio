@@ -43,6 +43,8 @@ function desprendeMenu() {
 };
 
 function verificaClique(menu) {
+    const menuContent = document.querySelector('.menu-content');
+
     const menuMobile = document.querySelector('.close-menu-label');
     let click = 0;
     menuMobile.addEventListener('click', () => {
@@ -50,11 +52,13 @@ function verificaClique(menu) {
         if (click % 2 === 1) {
             menu.classList.remove('prender');
             menu.classList.add('desprender');
+            menuContent.style.display = 'block'
         }
         if (click % 2 === 0) {
             menu.style.display = 'block'
             menu.classList.remove('desprender');
             menu.classList.add('prender');
+            menuContent.style.display = 'none'
 
         }
     })
