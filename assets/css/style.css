@@ -812,12 +812,12 @@ ul {
     }
 
     @keyframes desprenderText {
-        0% {
+        from {
             transform: scale(0);
             opacity: 0;
         }
 
-        100% {
+        to {
             transform: scale(100%);
             opacity: 1;
         }
@@ -831,7 +831,7 @@ ul {
     .desprenderText {
         display: flex;
         transform: scale(100%);
-        animation: desprenderText 1s ease-in;
+        animation: desprenderText 1s;
         /* transition: all 1s ease-in-out; */
 
     }
