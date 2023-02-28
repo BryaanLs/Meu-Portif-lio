@@ -811,29 +811,23 @@ ul {
         }
     }
 
+    .prenderText {
+        transform: scale(0);
+        transition: all 0.7s ease-in-out;
+    }
+
+    .desprenderText {
+        animation: desprenderText 1s;
+    }
+
     @keyframes desprenderText {
         from {
             transform: scale(0);
-
         }
 
         to {
             transform: scale(100%);
-
         }
-    }
-
-    .prenderText {
-        transform: scale(0);
-        /* transition: all 0.7s ease-in-out; */
-    }
-
-    .desprenderText {
-        display: flex;
-        /* transform: scale(100%); */
-        animation: desprenderText 1s;
-        /* transition: all 1s ease-in-out; */
-
     }
 
     .desprender::after,

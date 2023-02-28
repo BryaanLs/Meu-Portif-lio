@@ -50,7 +50,6 @@ function verificaClique(menu) {
     menuMobile.addEventListener('click', () => {
         click++;
         if (click % 2 === 1) {
-            menu.style.display = 'block';
 
             menu.classList.remove('prender');
             menuContent.classList.remove('prenderText');
