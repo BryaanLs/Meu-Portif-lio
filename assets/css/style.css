@@ -539,7 +539,6 @@ ul {
     transition: var(--transition);
     transform: translateY(-2rem);
     background-color: var(--p-color);
-
     box-shadow: 1px 2px 30px #000;
     border-radius: 1rem;
 }
@@ -628,7 +627,6 @@ ul {
 }
 
 .link-project {
-    /* padding: 1rem; */
     margin: 2rem 0;
 }
 
@@ -811,23 +809,33 @@ ul {
         }
     }
 
-    .prenderText {
-        transform: scale(0);
-        transition: all 0.3s;
-    }
+    @keyframes prenderText {
+        from {
+            transform: scale(100%);
 
-    .desprenderText {
-        animation: desprenderText 1s;
+        }
+
+        to {
+            transform: scale(0%);
+        }
     }
 
     @keyframes desprenderText {
         from {
-            transform: scale(0);
+            transform: scale(0%);
         }
 
         to {
             transform: scale(100%);
         }
+    }
+
+    .prenderText {
+        animation: prenderText 1s both;
+    }
+
+    .desprenderText {
+        animation: desprenderText 1s both;
     }
 
     .desprender::after,
