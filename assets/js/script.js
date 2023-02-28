@@ -51,14 +51,16 @@ function verificaClique(menu) {
         click++;
         if (click % 2 === 1) {
             menu.classList.remove('prender');
+            menuContent.classList.remove('prenderText');
             menu.classList.add('desprender');
-            menuContent.style.display = 'flex'
+            menuContent.classList.add('desprenderText');
         }
         if (click % 2 === 0) {
-            menu.style.display = 'block'
+            menu.style.display = 'block';
             menu.classList.remove('desprender');
+            menuContent.classList.remove('desprenderText');
             menu.classList.add('prender');
-            menuContent.style.display = 'none'
+            menuContent.classList.add('prenderText');
 
         }
     })

@@ -788,13 +788,13 @@ ul {
         from {
 
             height: 0;
-            opacity: 0;
+
         }
 
         to {
 
             height: 35rem;
-            opacity: 1;
+
 
         }
     }
@@ -808,8 +808,25 @@ ul {
 
         to {
             height: 0;
-            opacity: 0;
+            /* opacity: 0; */
         }
+    }
+
+
+    .prenderText {
+        transform: scale(0);
+        transition: all 1s ease-in-out;
+    }
+
+    .desprenderText {
+        display: flex;
+        transition: all 1s ease-in-out;
+
+    }
+
+    .desprender::after,
+    .prender::after {
+        position: absolute;
     }
 
     .menu {
@@ -859,10 +876,7 @@ ul {
         width: 100%;
     }
 
-    .desprender::after,
-    .prender::after {
-        position: absolute;
-    }
+
 
 
     .menu-content ul {
